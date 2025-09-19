@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Scpre Manager is a singleton
 public class ScoreManager : Singleton<ScoreManager>
 {
     public float HighScore = 0;
@@ -16,13 +17,16 @@ public class ScoreManager : Singleton<ScoreManager>
 
     void Update()
     {
+        //Makes time pass for the current time variable
         CurrentTime += Time.deltaTime;
 
+        //Checks what wave the game is on (to calculate stuff elsewhere) by dividing the current time by 5, and rounding down. It starts at wave 1.
         Wave = Mathf.FloorToInt((CurrentTime + 5) / 5);
     }
 
     public void MatchEnded()
     {
+        //Plays when the player dies. If the previous match's score is higher than your current high score, set that score to the new high score.
         if (CurrentTime > HighScore)
         {
             HighScore = CurrentTime;

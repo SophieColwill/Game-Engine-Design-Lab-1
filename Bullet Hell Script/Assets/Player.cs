@@ -14,10 +14,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Move Player using WASD / Arrow keys
         float y = Input.GetAxisRaw("Vertical");
         float x = Input.GetAxisRaw("Horizontal");
-
         transform.position += new Vector3(x, y) * Time.deltaTime * PlayerSpeed;
+
+        //Keep player within the playspace
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, -PlaySpace.x, PlaySpace.x), Mathf.Clamp(transform.position.y, -PlaySpace.y, PlaySpace.y));
     }
 }
