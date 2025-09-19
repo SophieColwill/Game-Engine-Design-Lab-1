@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float PlayerSpeed = 5;
+    public Vector2 PlaySpace;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,5 +18,6 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
 
         transform.position += new Vector3(x, y) * Time.deltaTime * PlayerSpeed;
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -PlaySpace.x, PlaySpace.x), Mathf.Clamp(transform.position.y, -PlaySpace.y, PlaySpace.y));
     }
 }

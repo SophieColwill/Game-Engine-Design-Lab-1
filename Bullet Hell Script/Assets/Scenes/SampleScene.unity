@@ -477,7 +477,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133332}
+  m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
 --- !u!50 &434714901
 Rigidbody2D:
@@ -519,6 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerSpeed: 5
+  PlaySpace: {x: 8.58, y: 4.64}
 --- !u!212 &434714903
 SpriteRenderer:
   m_ObjectHideFlags: 0
