@@ -1,11 +1,6 @@
-# Sophie Colwill (100919358)
+# Space Escape Colors
+## Sophie Colwill (100919358)
 
-Bullet Hell Lab 1 Thing:
-  The main gameplay loop of this, is you use WASD to move around dodging enemies. While the player controls are really basic, the difficulty comes from the enmies as not only do different enemy variations spawn as time goes on, but they also get faster & more frequent. When making it, I did remember a game called "Just Shapes & Beats" so the project is colored with those colors fully in mind.
+The main gameplay loop of Space Escape Colors is that, as soon as you load into the game you are thrusted into battle with space debris coming towards you. You use WASD to move around, and Left Shift to use your limited amount of boost to dodge the oncoming enemies. You keep going until you die, then try again to get a better highscore.
 
-  The system I used the singleton on in my project was the score keeper / wave keeper. It held the player's high score and current score, along with all the base enemy values since they change based on how large your score is. I choose to adopt it here as almost everything in the project, minus the player, would have to refrence everything held within in one way or another. This meant that grouping it up as an "easy to access" class was going to save me alot of work.
-  
-  In the end, I do think that making it a singleton was benifical in the way I implemented it since not only did it mean that keeping a High Score for the player was easy, but all the refrences that I would have had to make otherwise made the amount of code I had to write a substantial amount less.
-
-My Code Diagram:
-<img width="761" height="481" alt="Lab 1 Diagram" src="https://github.com/user-attachments/assets/b12bfd2e-5554-44cb-9804-3a69648c977b" />
+I think that my implementation of the Factory workflow was a rather good use of it as it makes my obstacle spawning code rather modular and easily expandable. All I have to do is create a new obstacle script, attach it to a prefab, then drag the prefab into my obstacle spawner script. Once that is done, I can repeat again and again until I have all the obstacles I want, and all I need to do is drag the prefab to the obstacle spawner to make it spawn in game. This would take more than double the lines of code to do, if I were to do it without the Factory design pattern.
